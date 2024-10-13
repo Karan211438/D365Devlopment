@@ -242,7 +242,7 @@ app.post('/api/createlookupattribute', async (req, res) => {
         });
         res.status(201).json({
             message: 'Lookup Attribute created successfully',
-           // data: response.data
+           data: response.data
         });
     } catch (error) {
         console.error('Error in creating Lookup Attribute:', {

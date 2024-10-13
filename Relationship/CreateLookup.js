@@ -7,8 +7,8 @@ class CreateLookup {
       this.ReferencingEntity = Lookups.ReferencingEntity;
       this.ReferencedAttribute=Lookups.ReferencedAttribute;
       this.CascadeConfiguration=this.Cascade();
-      this.Lookup= this.createLookup(Lookups.AttributeSchemaName,Lookups.AttributeDisplayName);
-      this.RequiredLevel=this.Required(Lookups.RequiredLevel);
+      this.Lookup= this.createLookup(Lookups.AttributeSchemaName,Lookups.AttributeDisplayName,Lookups.RequiredLevel);
+      //this.RequiredLevel=this.Required(Lookups.RequiredLevel);
     }
     Cascade() {
         return {
@@ -17,25 +17,23 @@ class CreateLookup {
         };
     }
     
-    createLookup(label,label2) {
+    createLookup(label,label2,RequiredLevel) {
         return {
             "SchemaName": label,
             "DisplayName": {
                 "LocalizedLabels": [
                     {
-                        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
                         "Label": label2,
                         "LanguageCode": 1033 
                     }
                 ]
+            },
+            "RequiredLevel": {
+              "Value": RequiredLevel
             }
         };
     }
-    Required(value){
-        return{
-             "Value": value,
-        };
-    }
+   
     
 }
 
