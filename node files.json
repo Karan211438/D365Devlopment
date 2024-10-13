@@ -1,0 +1,67 @@
+
+{  
+    "AttributeType": "Money",  
+    "AttributeTypeName": {  
+        "Value": "MoneyType"  
+    },  
+    "Description": {  
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",  
+        "LocalizedLabels": [  
+            {  
+                "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
+                "Label": "Enter the balance amount",  
+                "LanguageCode": 1033  
+            }  
+        ]  
+    },  
+    "DisplayName": {  
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",  
+        "LocalizedLabels": [  
+            {  
+                "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
+                "Label": "Balance",  
+                "LanguageCode": 1033  
+            }  
+        ]  
+    },  
+    "RequiredLevel": {  
+        "Value": "None",  
+        "CanBeChanged": true,  
+        "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"  
+    },  
+    "SchemaName": "new_Balance",  
+    "@odata.type": "Microsoft.Dynamics.CRM.MoneyAttributeMetadata",  
+    "PrecisionSource": 2  
+}
+
+{
+    "AttributeType": "Money",
+    "AttributeTypeName": {
+      "Value": "MoneyType"
+    },
+    "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Current bank balance",
+          "LanguageCode": 1033
+        }
+      ]
+    },
+    "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+        {
+          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+          "Label": "Bank Balance",
+          "LanguageCode": 1033
+        }
+      ]
+    },
+    "SchemaName": "dev_bankbalance",
+    "@odata.type": "Microsoft.Dynamics.CRM.MoneyAttributeMetadata"
+  }
+  /// vieews
+  "fetchxml": "<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'><entity name='dev_student'><attribute name='dev_firstname' /><attribute name='dev_lastname' /><attribute name='dev_email' /><attribute name='dev_admissiondate' /><attribute name='dev_course' /><attribute name='dev_status' /><attribute name='dev_studentId' /></entity></fetch>",
+    "layoutxml": "<grid name='resultset' object='1' jump='name' select='1' icon='1' preview='1'><row name='result' id='dev_studentId'><cell name='dev_firstname' width='200' /><cell name='dev_lastname' width='150' /><cell name='dev_email' width='200' /><cell name='dev_admissiondate' width='200' /><cell name='dev_course' width='200' /><cell name='dev_status' width='150' /></row></grid>",
